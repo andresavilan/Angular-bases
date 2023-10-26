@@ -6,12 +6,17 @@
   let isFirst = first;
   let isLast = last;
   "
-   class="list-group-item"
+   class="list-group-item d-flex justify-content-between align-items-center"
    [ngClass]="{'list-group-item-success': isFirst,
    'list-group-item-dark': isLast
   }
    ">
+   <div>
     <span class="text-primary"> {{i+1}} </span>
-  {{ character.name }} - Power: {{character.power}}
+    {{ character.name }} - Power: {{character.power}}
+   </div>
+
+
+  <button (click)="onDeleteCharacter(character.id)"  class="btn btn-danger">X</button>
   </li>
 </ul>
